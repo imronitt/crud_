@@ -1,0 +1,84 @@
+.header-container {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+
+
+}
+
+
+
+.heading {
+
+    width: 75%;
+
+    display: flex;
+
+    justify-content: center;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+}
+
+
+
+
+#logo {
+
+    text-decoration: none;
+
+    color: black;
+
+    text-align: center;
+
+}
+
+
+
+.nav-bar {
+
+    width: 70%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-around;
+
+}
+
+
+
+.nav-bar a {
+
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 24px;
+
+}
+
+
+
+.body-cont {
+
+    height: 70vh;
+
+}
+
+
+
+footer p {
+
+    text-align: center;
+
+    font-size: 24px;
+
+}

@@ -1,13 +1,14 @@
-
 <!DOCTYPE html>
 
 <html>
 
   <head>
 
-<title> <%= yield(:title)%>  </title>
+  <title> <%= display_title(yield(:title))%> </title>
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+    
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <%= csrf_meta_tags %>
 
@@ -25,9 +26,18 @@
 
   <body>
 
+<%= render 'layouts/header'%>
+
+
+
+<div class="body-cont">
+
     <%= yield %>
+
+</div>
+
+    <%= render 'layouts/footer' %>
 
   </body>
 
 </html>
-
