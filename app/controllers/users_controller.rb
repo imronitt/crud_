@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+before_action :user_logged_in, only: [:edit, :update., :show]
+before_action :check_user_correct, only: [:edit, :update, :show]
 
   def new
 
@@ -64,7 +66,20 @@ def update
 
   end
 
+end
+def user_logged_in
 
+  unless logged_in?
+    save_user_location
+    flash[:danger]="Login first"
+    redirect_to login_path
+  end 
+end
+def check_correct_user
+@user = User.find(params[:id])
+unless @user == current_user
+  flash[:danger]="Wrong user"
+  redirect_to root_path
 
 end
 

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
      log_in user
 
-    redirect_to user
+    rmove_user_to_url
 
     else
 

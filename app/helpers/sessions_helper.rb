@@ -32,6 +32,16 @@ module SessionsHelper
 
     end
 
+    def save_user_location
+        session[:user_url] = request.original_url 
+    end
+
+    def move_user_to_url
+        redirect_to(session[:user_url])
+        session.delete(:user_url)
+
+    end
+
 
 
     def logged_in?
