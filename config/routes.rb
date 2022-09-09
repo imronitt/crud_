@@ -1,28 +1,37 @@
 Rails.application.routes.draw do
+
+  get 'sessions/new'
+
   get 'users/new'
 
 
 
-  
-
-    get '/help', to: 'static_pages#help'
-
-    get '/about', to: 'static_pages#about'
-
-    get '/contact', to: 'static_pages#contact'
-
-    get '/signup', to: 'users#new'
-
-  
-
-  
 
 
+  get '/help', to: 'static_pages#help'
 
-    root 'static_pages#home'
+  get '/about', to: 'static_pages#about'
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '/contact', to: 'static_pages#contact'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/signup', to: 'users#new'
+
+  get '/login',to: 'sessions#new'
+
+  post '/login',to: 'sessions#create'
+
+  get '/logout',to: 'sessions#destroy'
+
+
+
+
+
+
+
+  root 'static_pages#home'
+
+  resources:users
+
+
+
 end

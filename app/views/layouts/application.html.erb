@@ -33,6 +33,16 @@
 <div class="body-cont">
 
     <%= yield %>
+    <% flash.each do |m_type,msg| %>
+
+      <div><%=msg %></div>
+    
+      <% end %>
+    
+    
+
+    <%= debug(params) if Rails.env.development? %>
+    render 'footer'
 
 </div>
 
